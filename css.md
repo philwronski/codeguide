@@ -2,11 +2,11 @@
 title: "CSS"
 ---
 
-## CSS
+# CSS
 
 Les styles doivent toujours être dans un fichier spécifique. Ne jamais ajouter de balise ou d'attribut `style` dans le code HTML.
 
-### Synthaxe
+## Synthaxe
 - Utiliser une tabulation à 2 espaces.
 - Une ligne par sélecteurs lors d'un groupement de sélecteurs.
 - Ajouter un espace avant chaque ouverture de bloc.
@@ -40,7 +40,7 @@ Les styles doivent toujours être dans un fichier spécifique. Ne jamais ajouter
 }
 ```
 
-### Ordre des déclarations
+## Ordre des déclarations
 Pour garder une cohérence d'ensemble et avoir une lecture simplifié du code, ranger les propriétés dans l'ordre suivante:
 1. Positionnement
 2. Modèle de boite
@@ -80,7 +80,7 @@ Pour garder une cohérence d'ensemble et avoir une lecture simplifié du code, r
 }
 ```
 
-### Utilisation des Media query
+## Utilisation des Media query
 Placer les media query dans chaque bloc/règle au lieu de regrouper le tout.
 
 ```css
@@ -107,7 +107,7 @@ Placer les media query dans chaque bloc/règle au lieu de regrouper le tout.
 }
 ```
 
-### Préfixer les proriétés
+## Préfixer les proriétés
 Il est recommandé de préfixer les propriétés pour disposer d'une compatibilité maximal pour chaque navigateur. Il est préférable de laisser des outils telque postcss ou les IDE le faire à votre place.
 
 Pour une question de lisibilité, aligner verticalement les propriétés.
@@ -119,7 +119,7 @@ Pour une question de lisibilité, aligner verticalement les propriétés.
 }
 ```
 
-### Les déclarations simple
+## Les déclarations simple
 Il arrive par fois qu'un sélecteur ne dispose que d'une propriété. Dans ce cas et uniquement dans ce cas, il est recommander de supprimer les retour à la ligne.
 
 ```css
@@ -137,7 +137,7 @@ Il arrive par fois qu'un sélecteur ne dispose que d'une propriété. Dans ce ca
 }
 ```
 
-### Propriété abrégée
+## Propriété abrégée
 Lors de l'utilisation des propriétés suivantes, il est recommandé d'utiliser leur version abrégée pour fixer leurs différentes valeurs.
 - padding
 - margin
@@ -165,7 +165,7 @@ Lors de l'utilisation des propriétés suivantes, il est recommandé d'utiliser 
 }
 ```
 
-### Commentaires
+## Commentaires
 
 Il ne faut pas hésiter à ajouter des commentaires dans le CSS pour expliquer le pourquoi du comment. Comme tout autre code, s'il n'est pas commenté, le css peut s'avérer difficile à comprendre.
 
@@ -183,7 +183,7 @@ Il ne faut pas hésiter à ajouter des commentaires dans le CSS pour expliquer l
 }
 ```
 
-### Nommage des classes et sélecteurs
+## Nommage des classes et sélecteurs
 - Toujours nommer les classes en minuscules et utiliser des tirets (celui ci `-` :D) pour la séparation des mots/termes.
 - Utiliser le double tiret pour les classes de changement d'état. (ex: `.btn--danger`)
 - Le BEM permet de nommer correctement les classes peut parfois être lourd à gérer. Dans ce cas privilégier SMACSS (https://smacss.com/)

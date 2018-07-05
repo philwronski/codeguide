@@ -2,9 +2,9 @@
 title: "SASS"
 ---
 
-## SASS
+# SASS
 
-### Structurer le code
+## Structurer le code
 Aujourd'hui avec les nombreux frameworks front orientés composants, il est parfois compliquer de structurer sont code correctement et d'appliquer le DRY (Dont repeat yourself). Pour les projets de ce type, il est recommander d'avoir une structure similaire à celle ci-dessous.
 
 ```

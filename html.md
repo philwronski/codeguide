@@ -2,7 +2,9 @@
 title: "HTML"
 ---
 
-### Ordre des attributs
+# HTML
+
+## Ordre des attributs
 Pour facilité la lecture du code, il est recommander d'écrire les attributs dans l'ordre suivant:
 - class
 - id, name
@@ -12,7 +14,7 @@ Pour facilité la lecture du code, il est recommander d'écrire les attributs da
 - role, aria-*
 - attributs liés au framework web
 
-### Attributs de type boolean
+## Attributs de type boolean
 HTML5 ne force pas la déclaration d'une valeur pour les attribut de type boolean. Le code est ainsi allégé et plus lisible.
 
 ```html
