@@ -5,7 +5,7 @@ title: "Git & Gitkraken"
 ## Git
 
 ### Gitflow
-Pour une meilleurs gestion des branches, il est recommandé d'utiliser gitflow. 
+Pour une meilleurs gestion des branches, il est recommandé d'utiliser gitflow. Gitflow est un addon de Git a installer manuellement. Il fournit un ensemble commande supplémentaire pour la gestion des branches.
 
 Pour plus d'information sur le fonctionnement et l'utilisation de gitflow avec git, se reporter au lien suivant : https://danielkummer.github.io/git-flow-cheatsheet/index.fr_FR.html
 
@@ -76,3 +76,18 @@ Le trio `prettier`, `lint-staged` et `husky` fonctionne trés bien.
 Pour plus de détails sur l'utilisation simultané de ces 3 modules, se rendre ici : https://prettier.io/docs/en/precommit.html#option-1-lint-staged-https-githubcom-okonet-lint-staged
 
 //TODO il y a également un exemple dans ...
+
+## Gitkraken
+
+### Gitflow
+Gitkraken fournit une interface pour l'activation de Gitflow. La seule chose à faire est de renseigner le nom des branches de base et de valider.
+
+![Gitkraken gitflow](images/gitkraken-gitflow.png)
+
+### Squash
+Gitkraken permet de squash des commits. Pour cela, il suffit de sélectionner plusieurs commits et de faire un clic gauche pour afficher le menu contextuel.
+
+![Gitkraken gitflow](images/gitkraken-squash.png)
+
+### Git Hooks
+Les hooks sont liés au répertoire `.git` du projet. Gitkraken ne gère pas les hook à proprement parler, mais affiche leur résultat si ils existent.
