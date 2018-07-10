@@ -1,0 +1,121 @@
+/* Il est recommander de fixer le modèle de boite avec cette valeur pour facilité le dimensionnement des éléments et éléments imbriqués.
+ * https://css-tricks.com/box-sizing/
+ * https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* avoid min-width: auto on flex and grid children */
+  min-width: 0;
+  min-height: 0;
+}
+
+html {
+  /* Fixe la taille de base à environ "10px". Cela facilite le calcul en unité rem. */
+  font-size: 62.5%;
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+  font-size: calc(1em * 0.625);
+}
+
+body {
+  margin: 0;
+  @include font-size(base);
+  background-color: $background-base;
+  color: $color-base;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+}
+
+/* Headings */
+h1, .h1-like {
+  @include font-size(h1);
+  @if variable_exists(font-family-headings) and $font-family-headings != $font-family-base{
+    font-family: $font-family-headings;
+  }
+  font-weight: $weight-medium;
+}
+
+h2, .h2-like {
+  @include font-size(h2);
+  @if variable_exists(font-family-headings) and $font-family-headings != $font-family-base{
+    font-family: $font-family-headings;
+  }
+  font-weight: $weight-medium;
+}
+
+h3, .h3-like {
+  @include font-size(h3);
+  font-weight: $weight-medium;
+}
+
+h4, .h4-like {
+  @include font-size(h4);
+  font-weight: $weight-medium;
+}
+
+h5, .h5-like {
+  @include font-size(h5);
+  font-weight: $weight-medium;
+}
+
+h6, .h6-like {
+  @include font-size(h6);
+  font-weight: $weight-medium;
+}
+
+/* Vertical rythm */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dd {
+  margin-top: 0;
+  margin-bottom: $headings-margin-bottom;
+}
+
+p,
+address,
+ol,
+ul,
+dl,
+blockquote,
+pre {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+/* Avoid margins on nested elements */
+li p,
+li .p-like,
+li ul,
+li ol,
+ol ol,
+ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Max values */
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video,
+svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}

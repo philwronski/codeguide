@@ -188,3 +188,10 @@ Il ne faut pas hésiter à ajouter des commentaires dans le CSS pour expliquer l
 - Utiliser le double tiret pour les classes de changement d'état. (ex: `.btn--danger`)
 - Le BEM permet de nommer correctement les classes peut parfois être lourd à gérer. Dans ce cas privilégier SMACSS (https://smacss.com/)
 - Utiliser les class plus tot que les tag d'éléments ou les sélecteurs d'attribut.
+
+## Reset
+Le `reset.css` est un fichier de style qui a pour but d'aligner le comportement des navigateurs au niveau de l'affichage des éléments standard HTML. Avec un comportement identique sur chaque navigateur, il est plus facile de créer un théme compatible multi-navigateur sans ajouter de hack.
+
+Il est fortement conseillé d'avoir un `reset.css` au début d'un théme css. Les 2 `reset.css` les plus connu sont:
+- Normalize.css https://necolas.github.io/normalize.css/
+- Reboot https://getbootstrap.com/docs/4.1/content/reboot/

@@ -1,0 +1,85 @@
+/* ------ */
+/* Mixins */
+/* ------ */
+
+/* Ce fichier contient quelques mixins utiles pour automatiser certains styles.
+ * Une mixin respect les règles suivantes:
+ *  - Une mixin permet de mutualiser et de réutiliser un bloc de code css.
+ *  - Une mixin retourne toujours du code css (à la différence d'une function).
+ *  - Si une mixin utilise une map, toujours controler les valeurs avec un @if/@else.
+ *  - Une mixin doit être simple à lire/comprendre. Elle doit donc contenir un minimum de code.
+ *  - Une mixin doit être documenter.
+ */
+
+/* Apply responsive styles  */
+/* ------------------------ */
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($bp-aliases, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($bp-aliases, $name))} {
+      @content;
+    }
+  }
+
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+/* Apply mobile and desktop font size  */
+/* ----------------------------------- */
+@mixin font-size($elem) {
+  @if map-has-key($font-sizes, $elem) {
+    $q: map-get($font-sizes, $elem);
+    $mob: map-get($q, "mobile");
+    $desk: map-get($q, "desktop");
+    font-size: $mob;
+    @include respond-to("medium-up") {
+      font-size: $desk;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$font-sizes}`. "
+        + "Please make sure it is defined in `$font-sizes` map.";
+  }
+}
+
+/* Apply bg and font color */
+/* ----------------------- */
+@mixin semantic-colors-variant() {
+  @each $name, $background-color, $color, $border in $semantic-color-variants-list {
+    &--#{$name} {
+      background-color: $background-color;
+      color: $color;
+    }
+  }
+}
+
+/* Apply padding */
+/* ------------- */
+@mixin padding($name) {
+  @if map-has-key($padding-aliases, $name) {
+    $padding: map-get($padding-aliases, $name);
+    padding: $padding;
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$padding-aliases}`. "
+        + "Please make sure it is defined in `$padding-aliases` map.";
+  }
+}
+  
+/* Apply margin */
+/* ------------ */
+@mixin margin($name) {
+  @if map-has-key($margin-aliases, $name) {
+    $margin: map-get($margin-aliases, $name);
+    margin: $margin;
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$margin-aliases}`. "
+        + "Please make sure it is defined in `$margin-aliases` map.";
+  }
+}
