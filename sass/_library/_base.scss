@@ -30,40 +30,54 @@ body {
   font-family: $font-family-base;
   line-height: $line-height-base;
 }
+.test {
+}
 
 /* Headings */
-h1, .h1-like {
+h1,
+.h1-like {
   @include font-size(h1);
-  @if variable_exists(font-family-headings) and $font-family-headings != $font-family-base{
+  @if variable_exists(font-family-headings) and
+    $font-family-headings !=
+    $font-family-base
+  {
     font-family: $font-family-headings;
   }
   font-weight: $weight-medium;
 }
 
-h2, .h2-like {
+h2,
+.h2-like {
   @include font-size(h2);
-  @if variable_exists(font-family-headings) and $font-family-headings != $font-family-base{
+  @if variable_exists(font-family-headings) and
+    $font-family-headings !=
+    $font-family-base
+  {
     font-family: $font-family-headings;
   }
   font-weight: $weight-medium;
 }
 
-h3, .h3-like {
+h3,
+.h3-like {
   @include font-size(h3);
   font-weight: $weight-medium;
 }
 
-h4, .h4-like {
+h4,
+.h4-like {
   @include font-size(h4);
   font-weight: $weight-medium;
 }
 
-h5, .h5-like {
+h5,
+.h5-like {
   @include font-size(h5);
   font-weight: $weight-medium;
 }
 
-h6, .h6-like {
+h6,
+.h6-like {
   @include font-size(h6);
   font-weight: $weight-medium;
 }

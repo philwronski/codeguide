@@ -67,9 +67,9 @@ Tous les hooks on leur importance. Cependant, celui à ne pas manquer est:
 Avec ce hooks, il est possible de vérifier tout un tas de chose comme par exemple s'il reste des erreurs/TODO dans notre code. Il est également possible de lancer des tests et/ou des linters pour analyser la qualité du code envoyé. Ce dernier cas s'inscrit dans le cadre de l'amélioration continue.
 
 #### Avec node.js
-Le trio `prettier`, `lint-staged` et `husky` fonctionne trés bien.
+Le duo `prettier`, `lint-staged` et `husky` fonctionne trés bien.
 
-- `prettier` se charge de formater le code.
+- `prettier` se charge de formater le code. (Ici, il n'est pas obligatoire mais le lien ci-dessous fournis un exemple simple du fonctionnement des 2 autres modules).
 - `lint-staged` s'occupe de lancer des commande sur les fichier staged.
 - `husky` exécute des commandes lors de l'appel des hooks.
 
